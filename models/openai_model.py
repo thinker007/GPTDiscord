@@ -317,11 +317,13 @@ class Model:
             "_hidden_attributes",
             "model_max_tokens",
             "openai_key",
+            "openai_api_base",
             "openai_organization",
             "IMAGE_SAVE_PATH",
         ]
 
         self.openai_key = EnvService.get_openai_token()
+        self.openai_api_base = EnvService.get_openai_api_base()
         self.openai_organization = EnvService.get_openai_organization()
 
     # Use the @property and @setter decorators for all the self fields to provide value checking
